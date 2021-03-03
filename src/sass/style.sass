@@ -1,6 +1,6 @@
 $pink_color: #1eacc7
 $white_color: #ffffff
-
+$second_color: #ff5656
 =btn_hover
   &:hover
     background-image: none
@@ -243,6 +243,7 @@ header
         width: 14px
         height: 2px
         background-color: $pink_color
+        transition: 0.3s all
       &::after
         content: ''
         display: block
@@ -252,17 +253,22 @@ header
         height: 14px
         width: 2px
         background-color: $pink_color
+        transition: 0.3s all
+      &:hover
+        &::before, &::after
+          background-color: #fff
+
+.color_white
+    background-color: $white_color 
+    color: #000000
+    &_text
+      color: $white_color
 
 
 .choice
   min-height: 896px
   padding: 57px 0 68px 0
   background: black url(../img/bg_choice.png) center (center / cover) no-repeat
-  .color_white
-    background-color: $white_color 
-    color: #000000
-    &_text
-      color: $white_color
   &_text
     width: 297px
     height: 42px
@@ -270,3 +276,126 @@ header
     text-align: center
     margin: 0 auto
     margin-top: 540px  
+
+.require
+  padding: 68px 0 84px 0
+  &_block
+    margin: 33px 0
+    &_none
+      margin-bottom: 0px
+  &_title
+    color: #1ca8c3
+    font-size: 22px
+    font-weight: 400
+  &_list
+    margin-top: 20px
+    list-style-type: none
+    padding-left: 50px
+    li
+      position: relative
+      font-size: 17px
+      font-weight: 300
+      line-height: 20px
+      margin-bottom: 10px
+      &::before
+        content: ''
+        position: absolute
+        display: block
+        left: -29px
+        top: 2.3px
+        height: 20px
+        width: 21px
+        background: url(../icons/check_blue.png) center (center / cover) no-repeat
+  &_descr
+    color: $pink_color
+    font-weight: 300
+    font-size: 17px
+.warning
+  .require_title
+    color: $second_color
+  li::before
+    background: url(../icons/check_2.png) center (center / cover) no-repeat
+
+.world
+  padding: 49px 0 49px 0
+  background: url(../img/bg_world.png) center (center / cover) no-repeat
+  .check_city
+    display: block
+    width: 193px
+    height: 14px
+    color: #1fbad6
+    font-size: 15px
+    font-weight: 400
+    text-transform: uppercase
+    margin: 486px auto 0 auto
+    text-align: center
+
+.futher
+  height: 156px
+  padding: 14px 0 39px 0
+  border-bottom: black 8px
+  position: relative
+  .line
+    width: 299px
+    height: 4px
+    background-color: #1fbad6
+    margin: 0 auto
+  .mb
+    margin-top: 32px
+    display: flex
+    justify-content: center
+    list-style-type: none 
+    &_item
+      margin-right: 46px
+      &:last-child
+        margin-right: 0
+    &_link
+      color: #070716
+      font-family: Roboto
+      font-size: 15px
+      font-weight: 300
+      text-transform: uppercase
+  .about
+    margin-top: 15px
+    display: flex
+    justify-content: center
+    list-style-type: none 
+    &_item
+      margin-right: 21px
+      &:last-child
+        margin-right: 0
+    &_link
+      color: #999999
+      font-size: 11px
+      font-weight: 300
+      text-transform: uppercase
+  .lanuage
+    display: block
+    margin: 19 auto 0 auto
+    color: #1fbad6
+    font-family: Roboto
+    font-size: 11px
+    font-weight: 400
+    text-transform: uppercase
+    text-align: center
+  .app
+    position: absolute
+    right: 23px
+    top: 52px
+  .social
+    width: 160px
+    display: flex
+    height: 32px
+    justify-content: space-between
+    &_link
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 0 4px
+      width: 32px
+      height: 32px
+      background-color: #070716
+      border-radius: 100%
+      i
+        color: #ffffff
+
